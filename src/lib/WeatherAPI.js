@@ -15,10 +15,17 @@ export class WeatherAPI {
   }
 
   async getWeatherData(location) {
-    const call = `https://api.weatherapi.com/v1/current.json?key=${this.key}&q=${location}&aqi=no`;
+    let weatherData;
+    try {
+      const call = `https://api.weatherapi.com/v1/current.json?key=${this.key}&q=${location}&aqi=no`;
+      const response = await fetch(call);
+      const json = await response.json();
 
-    const response = await fetch(call);
-    const json = await response.json();
-    return new WeatherData(json);
+      weatherData = new WeatherData(json);
+    } catch (error) {
+      console.error("Failed to get error data");
+      weatherData = null;
+    }
+    return weatherData;
   }
 }
