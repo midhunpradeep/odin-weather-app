@@ -40,14 +40,23 @@ function updateWeatherOutput() {
 
 const weatherSearchForm = document.getElementById("weather-search-form");
 const weatherInput = weatherSearchForm.querySelector("input[name='location']");
+const searchStatus = weatherSearchForm.querySelector(".search-status");
 
 weatherSearchForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const data = await api.getWeatherData(weatherInput.value);
-  if (!data) return;
+  const searchTerm = weatherInput.value;
+  searchStatus.textContent = `Searching for location '${searchTerm}'`;
+
+  const data = await api.getWeatherData(searchTerm);
+  if (!data) {
+    searchStatus.textContent = `Couldn't find data for location '${searchTerm}'`;
+    return;
+  }
+
+  weatherData = data;
 
   weatherInput.value = "";
-  weatherData = data;
+  searchStatus.textContent = "";
   updateWeatherOutput();
 });
