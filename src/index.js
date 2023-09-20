@@ -7,7 +7,7 @@ const api = new WeatherAPI("98eeef4b2615454eb40115006231909");
 let weatherData = null;
 
 const weatherOutputWrapper = document.getElementById("weather-output-wrapper");
-const fields = {
+const weatherOutputFields = {
   name: weatherOutputWrapper.querySelector(".name"),
   region: weatherOutputWrapper.querySelector(".region"),
   country: weatherOutputWrapper.querySelector(".country"),
@@ -27,14 +27,14 @@ temperatureToggleBtn.addEventListener("click", () => {
 function updateWeatherOutput() {
   if (!weatherData) return;
 
-  fields.name.textContent = weatherData.name;
-  fields.region.textContent = weatherData.region;
-  fields.country.textContent = weatherData.country;
-  fields.condition.textContent = weatherData.condition;
+  weatherOutputFields.name.textContent = weatherData.name;
+  weatherOutputFields.region.textContent = weatherData.region;
+  weatherOutputFields.country.textContent = weatherData.country;
+  weatherOutputFields.condition.textContent = weatherData.condition;
   if (useCelsius) {
-    fields.temperature.textContent = weatherData.tempC + " °C";
+    weatherOutputFields.temperature.textContent = weatherData.tempC + " °C";
   } else {
-    fields.temperature.textContent = weatherData.tempF + " °F";
+    weatherOutputFields.temperature.textContent = weatherData.tempF + " °F";
   }
 }
 
