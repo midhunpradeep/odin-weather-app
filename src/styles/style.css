@@ -27,9 +27,8 @@ button {
   cursor: pointer;
 }
 
-header,
-main {
-  margin: 1em;
+header {
+  padding: 1em;
 }
 
 header .logo {
