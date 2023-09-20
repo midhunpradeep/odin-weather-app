@@ -9,5 +9,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>WeatherAPI App</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Weather</h1>
+    <form id="weather-search-form">
+      <label>
+        Location
+        <input type="text" name="location" />
+      </label>
+      <button type="submit">Search</button>
+    </form>
+    <div id="weather-output-wrapper">
+      <h2 class="name"></h2>
+      <p class="region"></p>
+      <p class="country"></p>
+
+      <p class="condition"></p>
+      <p class="temperature"></p>
+    </div>
+  </body>
 </html>
