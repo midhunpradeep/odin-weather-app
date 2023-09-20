@@ -1,5 +1,9 @@
 "use strict";
 
+import "./styles/normalize.css";
+import "./styles/reset.css";
+import "./styles/style.css";
+
 import { WeatherAPI } from "./lib/WeatherAPI";
 
 const api = new WeatherAPI("98eeef4b2615454eb40115006231909");
