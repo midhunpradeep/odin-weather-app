@@ -41,21 +41,25 @@
         <p class="search-status"></p>
       </form>
 
-      <button
-        type="button"
-        class="temperature-toggle-btn"
-        id="temperature-toggle-btn"
-      >
-        Use Fahrenheit
-      </button>
+      <div class="weather-output-wrapper" id="weather-output-wrapper">
+        <div class="location-wrapper">
+          <p class="name"></p>
+          <p class="region"></p>
+          <p class="country"></p>
+        </div>
 
-      <div id="weather-output-wrapper">
-        <h2 class="name"></h2>
-        <p class="region"></p>
-        <p class="country"></p>
+        <div class="weather-wrapper">
+          <p class="condition"></p>
+          <p class="temperature"></p>
+        </div>
 
-        <p class="condition"></p>
-        <p class="temperature"></p>
+        <button
+          type="button"
+          class="temperature-toggle-btn"
+          id="temperature-toggle-btn"
+        >
+          °C
+        </button>
       </div>
     </main>
   </body>

@@ -23,8 +23,7 @@ let useCelsius = true;
 const temperatureToggleBtn = document.getElementById("temperature-toggle-btn");
 temperatureToggleBtn.addEventListener("click", () => {
   useCelsius = !useCelsius;
-  temperatureToggleBtn.textContent =
-    "Use " + (useCelsius ? "Fahrenheit" : "Celsius");
+  temperatureToggleBtn.textContent = useCelsius ? "°C" : "°F";
   updateWeatherOutput();
 });
 
