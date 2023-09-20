@@ -25,7 +25,12 @@ export class WeatherData {
     return this._condition;
   }
 
+  get conditionIcon() {
+    return this._conditionIcon;
+  }
+
   constructor(weatherJSON) {
+    console.log(weatherJSON);
     this._name = weatherJSON.location.name;
     this._region = weatherJSON.location.region;
     this._country = weatherJSON.location.country;
@@ -33,5 +38,7 @@ export class WeatherData {
     this._tempC = weatherJSON.current.temp_c;
     this._tempF = weatherJSON.current.temp_f;
     this._condition = weatherJSON.current.condition.text;
+
+    this._conditionIcon = weatherJSON.current.condition.icon;
   }
 }

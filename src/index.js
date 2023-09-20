@@ -15,6 +15,7 @@ const weatherOutputFields = {
   name: weatherOutputWrapper.querySelector(".name"),
   region: weatherOutputWrapper.querySelector(".region"),
   country: weatherOutputWrapper.querySelector(".country"),
+  conditionImage: weatherOutputWrapper.querySelector(".condition-image"),
   condition: weatherOutputWrapper.querySelector(".condition"),
   temperature: weatherOutputWrapper.querySelector(".temperature"),
 };
@@ -33,6 +34,10 @@ function updateWeatherOutput() {
   weatherOutputFields.name.textContent = weatherData.name;
   weatherOutputFields.region.textContent = weatherData.region;
   weatherOutputFields.country.textContent = weatherData.country;
+
+  weatherOutputFields.conditionImage.src = weatherData.conditionIcon;
+  weatherOutputFields.conditionImage.alt = weatherData.condition + " icon";
+
   weatherOutputFields.condition.textContent = weatherData.condition;
   if (useCelsius) {
     weatherOutputFields.temperature.textContent = weatherData.tempC + " °C";
