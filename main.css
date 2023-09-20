@@ -502,7 +502,7 @@ main > * {
   font-size: 2rem;
 }
 
-.weather-search-form button[type="submit"]:is(:hover, :focus) {
+.weather-search-form button[type="submit"]:hover {
   transform: scale(1.1);
 }
 
@@ -550,7 +550,7 @@ main > * {
   transition: transform 200ms ease-out;
 }
 
-.temperature-toggle-btn:is(:hover, :focus) {
+.temperature-toggle-btn:hover {
   transform: scale(1.2);
 }
 
