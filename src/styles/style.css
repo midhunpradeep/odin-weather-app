@@ -128,7 +128,7 @@ main > * {
 
 .weather-output-wrapper > div > p:first-of-type {
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
