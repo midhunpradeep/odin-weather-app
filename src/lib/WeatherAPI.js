@@ -23,7 +23,7 @@ export class WeatherAPI {
 
       weatherData = new WeatherData(json);
     } catch (error) {
-      console.error("Failed to get error data");
+      console.error("Failed to get weather data");
       weatherData = null;
     }
     return weatherData;
