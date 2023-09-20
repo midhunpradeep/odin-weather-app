@@ -78,7 +78,7 @@ main > * {
 }
 
 .weather-search-form label input:focus {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--accent);
 }
 
 .weather-search-form button[type="submit"] {
