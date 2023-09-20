@@ -63,3 +63,11 @@ weatherSearchForm.addEventListener("submit", async (event) => {
   searchStatus.textContent = "";
   updateWeatherOutput();
 });
+
+async function setDefaultWeather() {
+  const data = await api.getWeatherData("london");
+  weatherData = data;
+  updateWeatherOutput();
+}
+
+setDefaultWeather();
