@@ -18,7 +18,7 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
-    watchFiles: ["src/*.html"],
+    watchFiles: ["src/*.html", "src/*.css"],
     hot: true,
   },
   plugins: [
